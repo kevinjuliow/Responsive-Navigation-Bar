@@ -124,6 +124,8 @@ li{
   list-style: none;
   position: absolute;
   height: 60%;
+  margin: 0% 0%;
+  width: 100%;
   left: 0px;
   display: block;
   border-bottom-left-radius: 10px;
