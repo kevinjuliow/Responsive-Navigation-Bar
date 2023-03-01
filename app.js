@@ -1,6 +1,16 @@
 const hambMenu = document.querySelector('.material-symbols-outlined');
 const navBar = document.querySelector('.navBar');
-const body = document.querySelector('body')
+const body = document.querySelector('body');
+const logo = document.querySelector('.logo');
+const listItems = document.querySelector('ul');
+
+
+window.addEventListener('scroll' , () => {
+ navBar.classList.toggle('navScroll' , scrollY > 1)
+ logo.classList.toggle('logoScroll' , scrollY > 1)
+ listItems.classList.toggle('listScroll' , scrollY > 1)
+hambMenu.classList.toggle('hambScroll' , scrollY > 1)
+})
 
 const ul = document.createElement('ul');
 const li1 = document.createElement('li');
@@ -19,12 +29,7 @@ li5.innerText = 'Contact';
 
 
 hambMenu.addEventListener('click' , function(){
-
-
   ul.classList.toggle('ulList');
- 
-  
-
   li1.classList.toggle('liList')
   li2.classList.toggle('liList')
   li3.classList.toggle('liList')
@@ -45,7 +50,9 @@ hambMenu.addEventListener('click' , function(){
     ul.style.transition ='4s'
   }
 
- 
-
-
+  window.addEventListener('scroll' ,() =>{
+    ul.remove();
+  })
+  
 })
+

@@ -7,6 +7,7 @@
 
 body{
   background-color: rgb(5, 5, 34);
+  height: 2000px;
 }
 
 .navBar{
@@ -16,8 +17,16 @@ body{
   border-bottom-style: solid;
   border-bottom-width: 1px;
   height: 80px;
+  position: fixed;
+  width: 100%;
   border-bottom-color: rgba(238, 243, 244, 0.198);
+  transition: .4s;
 }
+.navScroll{ 
+  background-color: rgba(238, 244, 244, 0.647);
+  height: 70px;
+}
+
 
 .logo{
   color: white;
@@ -30,6 +39,10 @@ body{
   letter-spacing: 3px;
   margin-left: 10%;
   cursor:default;
+  transition: .4s;
+}
+.logoScroll{
+  color:  rgb(5, 5, 34);
 }
 
 ul {
@@ -49,10 +62,16 @@ ul {
   transition: .2s;
 }
 .list-items:hover{
-  text-shadow: 0 0 5px;
+  text-shadow: 0 0 5px black;
   cursor: pointer;
-  color: rgb(53, 123, 125);
+  color: rgb(224, 221, 221);
 }
+.listScroll{
+  color:  rgb(5, 5, 34);
+}
+
+
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -60,6 +79,14 @@ ul {
   'GRAD' 0,
   'opsz' 48;
   display: none;
+}
+.hambScroll{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color:  rgb(5, 5, 34);
 }
 .ulList{
   display: none;
@@ -70,6 +97,7 @@ ul {
 li{
   display: none;
 }
+
 
 
 
@@ -85,6 +113,10 @@ li{
 }
 
 @media screen and (max-width : 780px) {
+  .logo{
+    position: absolute;
+    left: 1%;
+  }
  ul{
   position: absolute;
   display: block;
@@ -107,6 +139,14 @@ li{
   right: 30px;
   display: block;
 }
+.hambScroll{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color:  rgb(5, 5, 34);
+}
 .material-symbols-outlined:hover{
   cursor: pointer;
   opacity: 0.8;
@@ -122,7 +162,7 @@ li{
 .ulList{
   background-color: rgba(54, 53, 53, 0.476);
   list-style: none;
-  position: absolute;
+  position: fixed;
   height: 60%;
   margin: 0% 0%;
   width: 100%;
@@ -130,7 +170,9 @@ li{
   display: block;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  top: 80px;
 }
+
 li{
   display: none;
 }
